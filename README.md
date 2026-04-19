@@ -33,9 +33,11 @@ The goal is to build strong fundamentals and improve speed for placement exams.
 
 ```
 PrepInsta-Top-Codes/
+|── Basic/
+│── Numbers/
+│── Recursion/
 │── Arrays/
 │── Strings/
-│── Numbers/
 │── Patterns/
 │── Searching_Sorting/
 │── Misc/
