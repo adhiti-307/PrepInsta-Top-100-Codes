@@ -1,0 +1,92 @@
+## 🧩 Problem: Remove Vowels from a String
+
+### 📄 Problem Statement
+Write a Java program to remove all vowels from a given string.
+
+### 📥 Input
+A string `str`.
+
+### 📤 Output
+Print the string after removing all vowels.
+
+### 💡 Example
+
+**Input:**
+```
+hello
+```
+
+**Output:**
+```
+hll
+```
+
+**Input:**
+```
+PROGRAMMING
+```
+
+**Output:**
+```
+PRGRMMNG
+```
+
+### 🧠 Approach
+1. Traverse each character of the string.  
+2. Check whether the character is a vowel.  
+3. If it is not a vowel, append it to the result.  
+4. Print the final string.  
+
+---
+
+### 💻 Java Code
+
+#### 🔹 Method 1: Using Direct Comparison
+```java
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        String result = "";
+
+        for(int i = 0; i < str.length(); i++){
+            char ch = str.charAt(i);
+            char lower = Character.toLowerCase(ch);
+
+            if(lower != 'a' && lower != 'e' && lower != 'i' && lower != 'o' && lower != 'u'){
+                result += ch;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+```
+
+---
+
+#### 🔹 Method 2: Using String `indexOf`
+```java
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+
+        String vowels = "aeiouAEIOU";
+        String result = "";
+
+        for(char ch : str.toCharArray()){
+            if(vowels.indexOf(ch) == -1){
+                result += ch;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+```
